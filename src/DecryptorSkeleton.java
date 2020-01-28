@@ -110,7 +110,9 @@ public class RowanTest {
      */
     public static void divideArrayValues(int[] toDecrypt) {
         // TODO
-    
+    	for (int i=0; i< toDecrypt.length; i++) {
+    		toDecrypt[i] = (toDecrypt[i]/5);
+    	}
     }
 
 
@@ -158,6 +160,9 @@ public class RowanTest {
         StringBuilder solution = new StringBuilder();
 
         // TODO
+        for (int i=0; i< toDecrypt.length; i++) {
+    		System.out.print(cypher.get(toDecrypt[i]));
+    	}
 
         solution.append('!');
         return solution.toString();
