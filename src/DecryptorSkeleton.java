@@ -58,11 +58,11 @@ public class RowanTest {
      */
     public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
         // TODO
-    	for (int i=0; i< toDecrypt.length; i++) {
-    		String binaryString = String.valueOf(toDecrypt[i]);
-    		int decimal=Integer.parseInt(binaryString,2);  
-    		toDecrypt[i] = decimal;
-    	}
+    	int i;
+    	for(i = 0; i < toDecrypt.length; ++i) {
+    		String s = Integer.toString(toDecrypt[i]);
+        	toDecrypt[i] = Integer.parseInt(s, 2);
+        }
     }
 
 
