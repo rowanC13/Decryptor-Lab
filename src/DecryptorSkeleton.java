@@ -25,7 +25,7 @@ import java.util.HashMap;
  * @author ...
  * @author ...
  */
-public class DecryptorSkeleton {
+public class RowanTest {
     public static void main(String[] args) {
         int[] toDecrypt = {
                 101001, 1001101, 1010011, 11010, 10, 10000000, 1001100, 1101011, 11,
@@ -45,7 +45,6 @@ public class DecryptorSkeleton {
         System.out.println(A1Z26Cypher(toDecrypt));     // As a check, the first word in this String is "hope".
     }
 
-
     /**
      * STEP 1: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
      *         WHO COMPLETED THIS MAKE AND PUSH THE COMMIT TO GITHUB.
@@ -59,6 +58,11 @@ public class DecryptorSkeleton {
      */
     public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
         // TODO
+    	for (int i=0; i< toDecrypt.length; i++) {
+    		String binaryString = String.valueOf(toDecrypt[i]);
+    		int decimal=Integer.parseInt(binaryString,2);  
+    		toDecrypt[i] = decimal;
+    	}
     }
 
 
@@ -78,6 +82,18 @@ public class DecryptorSkeleton {
      */
     public static void shiftArrayValues(int[] toDecrypt) {
         // TODO
+    	for (int i=0; i< toDecrypt.length; i++) {
+    		if ((i%3)==0) {
+    			toDecrypt[i] = (toDecrypt[i]-1);
+    		}
+    		else if ((i%3)==1) {
+    			toDecrypt[i] = (toDecrypt[i]-2);
+    		}
+    		else
+    		{
+    			toDecrypt[i] = (toDecrypt[i]-3);
+    		}
+    	}
     }
 
 
@@ -94,6 +110,7 @@ public class DecryptorSkeleton {
      */
     public static void divideArrayValues(int[] toDecrypt) {
         // TODO
+    
     }
 
 
